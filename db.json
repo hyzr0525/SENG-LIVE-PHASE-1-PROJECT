@@ -1,34 +1,72 @@
 {
     "players": [
       {
-        "name": "",
-        "team": "",
-        "number": "",
-        "image": ""
+        "name": "Kevin Durant",
+        "team": "Brooklyn Nets",
+        "number": "7",
+        "image": "https://static01.nyt.com/images/2021/04/15/business/15econ-brf-coinbase/merlin_186240468_57bd6273-0318-4de0-a966-f3d540201223-mediumSquareAt3X.jpg",
+        "id": 1
       },
       {
-        "name": "",
-        "team": "",
-        "number": "",
-        "image": ""
+        "name": "Zion Williamson",
+        "team": "New Orleans Pelicans",
+        "number": "1",
+        "image": "https://cdn.vox-cdn.com/thumbor/FG1HjxIUhiCjv6hxngn10aqwtZc=/0x0:3136x4704/1200x800/filters:focal(1112x1364:1612x1864)/cdn.vox-cdn.com/uploads/chorus_image/image/69169477/1232427714.0.jpg",
+        "id": 2
       },
       {
-        "name": "",
-        "team": "",
-        "number": "",
-        "image": "" 
+        "name": "Brandon Ingram",
+        "team": "New Orleans Pelicans",
+        "number": "14",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Brandon_Ingram_2020.jpg",
+        "id": 3  
       },
       {
-        "name": "",
-        "team": "",
-        "number": "",
-        "image": ""
+        "name": "Karl-Anthony Towns",
+        "team": "Minnesota Timberwolves",
+        "number": "32",
+        "image": "https://nothinbutnets.com/wp-content/uploads/getty-images/2021/04/1187260225.jpeg",
+        "id": 4
+      },      
+      {
+        "name": "Vince Carter (old school)",
+        "team": "Toronto Raptors",
+        "number": "15",
+        "image": "https://media.gq.com/photos/56ba5a91cdf2db6945d2e277/master/pass/vince-carter-dunk.jpg",
+        "id": 5 
+      },      {
+        "name": "Lebron James",
+        "team": "Los Angeles Lakers",
+        "number": "23",
+        "image": "https://www.golfdigest.com/content/dam/images/golfdigest/fullset/2021/4/LebronJames_April2021.jpg",
+        "id": 6 
+      },      {
+        "name": "Damian Lillard",
+        "team": "Portland Trail Blazers",
+        "number": "0",
+        "image": "https://cdn.amomama.com/e2c63bfcf367518e3b9ab323dcc22073.jpeg?width=3110&height=2074",
+        "id": 7 
       },
       {
-        "name": "",
-        "team": "",
-        "number": "",
-        "image": ""
+        "name": "Boban Marjanovich",
+        "team": "Dallas Mavericks",
+        "number": "51",
+        "image": "https://culturedent.com/wp-content/uploads/2018/06/Boban-Marjanovic-scaled.jpeg",
+        "id": 8 
+      }
+      {
+        "name": "Trae Young",
+        "team": "Atlanta Hawks",
+        "number": "11",
+        "image": "https://www.si.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTgxMzQ3MTA3NzA4MzQ4MzYz/trae-young-game-3.jpg",
+        "id": 9 
+      }
+      {
+        "name": "Giannis Antetokounmpo",
+        "team": "Milwaukee Bucks",
+        "number": "34",
+        "image": "https://images.news18.com/ibnlive/uploads/2021/07/1626149874_giannis-antetokounmpo.jpg",
+        "id": 10  
       }
     ]
   }
