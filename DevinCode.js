@@ -1,1 +1,2 @@
-// type your code here
+
+document.body.createElement('div')
