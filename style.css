@@ -19,7 +19,7 @@
     width: 550px;
   }
   
-  .player-card {
+  #cards-container {
     border: solid;
     border-color: #ffcb05;
     padding: 50px;
@@ -32,11 +32,11 @@
     height: 275px;
   }
   
-  .poke-card:hover {
+  #cards-container:hover {
     box-shadow: 0 8px 16px 0 rgba(218, 31, 31, 0.685);
   }
   
-  #poke-container {
+  #cards-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -65,11 +65,13 @@
     background-color: #ffcb05;
   }
   
+
+
   label {
     color: rgb(83, 79, 79);
   }
   
-  #poke-form-container {
+  #form-container {
     margin-top: 25px;
     display: flex;
     justify-content: center;
