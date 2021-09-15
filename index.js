@@ -25,6 +25,7 @@ function renderCards(cards){
     const playerImg = document.createElement('img')
     playerImg.src = cards.image
     playerImg.alt = cards.name
+    playerImg.id = "player-pictures"
 
     const likeBttn = document.createElement("button")
     likeBttn.className = "like-bttn"
@@ -37,7 +38,8 @@ function renderCards(cards){
     deleteBttn.addEventListener("click", () => deletePlayer(playerCard));
 
     const playerInfo = document.createElement('div')
-    playerInfo.id = "info"
+    playerInfo.id = `player ${cards.id}`
+    playerInfo.className = "hide"
 
     const playerName = document.createElement('h4')
     playerName.textContent = cards.name
@@ -51,23 +53,26 @@ function renderCards(cards){
     const createButton = document.createElement('button')
     createButton.className = "info-bttn"
     createButton.textContent = "Player Info"
+    createButton.addEventListener('click', showInfo)
+    
+    function showInfo(e) {
+        if (e.target.querySelector('.hide') === e.target.querySelector('.hide')){
+          e.target.querySelector('.hide').classList.toggle('show') 
+        } else e.target.querySelector('.show').classList.toggle('.hide')
 
-    playerCard.append(playerImg, likeBttn, createButton, playerInfo, deleteBttn)
+        }
+    createButton.appendChild(playerInfo)
+    playerCard.append(playerImg, likeBttn, createButton, deleteBttn)
     playerInfo.append(playerName, playerNumber, playerTeam)
     cardsContainer.appendChild(playerCard)
-
-    const button = document.querySelector('button') // player info button
-    const cardsInfo = document.getElementById('info') // info displayed by button
-    let cardsInfoVisible = "hidden" // info default state of hidden
-
-    function toggleInfo() { // function to toggle info as hidden or visible
-        cardsInfoVisible = cardsInfoVisible === "hidden" ? cardsInfoVisible = "visible" : cardsInfoVisible = "hidden";
-        cardsInfo.style.visibility = cardsInfoVisible
+    
+    
     }
 
-    button.onclick = toggleInfo
 
-}
+
+
+
 
 function lightUpButton(likeBttn){
     // funtion for light up the like buttom after it clicked

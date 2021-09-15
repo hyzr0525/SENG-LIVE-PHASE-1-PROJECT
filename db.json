@@ -47,12 +47,12 @@
         "name": "Damian Lillard",
         "number": "0",
         "team": "Portland Trail Blazers",
-        "image": "./img/cards/dame7.jpg"
+        "image": "./img/cards/dame7.jpeg"
         
       },
       {
         "id": 8,
-        "name": "Boban Marjanovich",
+        "name": "Boban (the big boy) Marjanovich",
         "number": "51",
         "team": "Dallas Mavericks",
         "image": "./img/cards/boban8.jpeg"

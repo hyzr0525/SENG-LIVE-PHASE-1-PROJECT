@@ -1,3 +1,7 @@
+body {
+background-color: rgb(139, 169, 187);
+}
+
 #header {
     text-align: center;
     margin: 0 auto;
@@ -7,7 +11,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width:50%
+    width:50%;
     height: 150px
   }
 
@@ -17,27 +21,51 @@
       -1px 1px 0 rgb(247, 241, 241), 1px 1px 0 rgb(247, 241, 241);
   }
   
-  img {
-    height: 170px;
-    width: 170px;
+  .header-text {
+    font-size: larger;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  
+
+  #players {
+    height:400px;
+    width: 400px;
+    
+  }
+
+
+  #cards-gif {
+    height: default;
+    width: default;
+    text-align: center;
+
   }
   
   #header-img {
-    height: 175px;
-    width: 50%;
+    height: 275px;
+    width: 1700px;
   }
   
   .player-cards {
     border: solid;
-    border-color: #ffcb05;
-    padding: 20px;
+    border-color: #0586ff;
+    padding: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     margin: 30px;
     float: left;
     text-align: center;
     width: 175px;
-    height: 400px;
+    height: 425px;
+  }
+
+  #player-pictures {
+    display: inline;
+    height: 200px;
+    width: 175px;
+    text-align: center;
   }
   
   .player-cards:hover {
@@ -86,7 +114,7 @@
   
   #form-container {
     margin-top: 25px;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
   }
   
@@ -119,3 +147,13 @@
     font-size: medium;
 
   }
+
+  .hide {
+    display: none;
+  }
+
+
+  .show {
+    display: block;
+  }
+  

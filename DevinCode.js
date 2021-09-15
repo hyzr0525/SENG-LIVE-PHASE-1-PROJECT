@@ -1,9 +1,9 @@
 const BASE_URL = "http://localhost:3000/players"
 const cardsContainer = document.getElementById("cards-container")
 
-getCards()
 
-function getCards(){
+
+const getCards = () => {
     fetch(BASE_URL)
     .then(res => res.json())
     .then(function (cardsArray){
@@ -13,7 +13,8 @@ function getCards(){
     })
 }
 
-function renderCards(cards){
+
+const renderCards = (cards) => {
     const playerCard = document.createElement('div')
     playerCard.id = cards.id
     playerCard.className = "player-cards"
@@ -21,36 +22,65 @@ function renderCards(cards){
     const playerImg = document.createElement('img')
     playerImg.src = cards.image
     playerImg.alt = cards.name
+    playerImg.id = 'players'
 
     const playerInfo = document.createElement('div')
     playerInfo.id = "info"
+    
 
     const playerName = document.createElement('h2')
     playerName.textContent = cards.name
+    playerName.class = 'player-font'
 
     const playerNumber = document.createElement('h4')
-    playerNumber.textContent = `wears number ${cards.number} for the`
-    
+    playerNumber.textContent = `Number ${cards.number}`
+    playerNumber.class = 'player-font'
+
     const playerTeam = document.createElement('h3')
     playerTeam.textContent = cards.team
+    playerTeam.class = 'player-font'
 
-    const createButton = document.createElement('bttn')
-    createButton.textContent = "Player Info"
+    const createButton = document.createElement('button')
+    createButton.innerHTML = "Player Info"
+    createButton.className = "button"
+    
 
 
-    playerCard.append(playerImg, createButton, playerInfo)
-    playerInfo.appendChild(playerName, playerNumber, playerTeam)
+    playerCard.append(playerName, playerImg, createButton, playerInfo)
+    playerInfo.append(playerNumber, playerTeam)
     cardsContainer.appendChild(playerCard)
 
-    const button = document.querySelector('button') // player info button
-    const cardsInfo = document.getElementById('info') // info displayed by button
-    let cardsInfoVisible = "hidden" // info default state of hidden
+ 
+   
 
-    function toggleInfo() { // function to toggle info as hidden or visible
-        cardsInfoVisible = cardsInfoVisible === "hidden" ? cardsInfoVisible = "visible" : cardsInfoVisible = "hidden";
-        cardsInfo.style.visibility = cardsInfoVisible
-    }
-
-button.onclick = toggleInfo
 
     }
+
+getCards() 
+
+let btns = document.querySelectorAll('button')
+
+btns.forEach(button => {
+    button.addEventListener('click', clickEach)
+})
+
+function clickEach(e){
+let id = e.currentTarget.id
+let btn = document.getElementById(id)
+let div = document.getElementById('info')
+div.className = id
+}
+
+
+
+
+// document.querySelectorAll('button').forEach(button => {
+//     button.addEventListener('click', () => {
+//         if (playerInfo.style.display === 'none') {
+//             playerInfo.style.display === 'block'
+//         } else {
+//             playerInfo.style.display = "none"
+//         }
+    
+// })
+// })
