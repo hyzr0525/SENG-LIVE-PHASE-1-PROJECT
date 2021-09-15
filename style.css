@@ -1,5 +1,5 @@
 body {
-background-color: rgb(139, 169, 187);
+background-color: rgb(181, 213, 233);
 }
 
 #header {
@@ -54,6 +54,7 @@ background-color: rgb(139, 169, 187);
   
   .player-cards {
     border: solid;
+    color: darkgrey;
     border-color: #0586ff;
     padding: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
