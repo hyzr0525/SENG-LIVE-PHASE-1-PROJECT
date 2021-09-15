@@ -2,49 +2,49 @@
     "players": [
       {
         "id": 1,
-        "name": "Kevin Durant",
+        "name": "Kevin Durant, SF/PF",
         "number": "7",
         "team": "Brooklyn Nets",
         "image": "./img/cards/kd1.jpg"
       },
       {
         "id":2,
-        "name": "Zion Williamson",
+        "name": "Zion Williamson, PF/???",
         "number": "1",
         "team": "New Orleans Pelicans",
         "image": "./img/cards/zion2.jpg"
       },
       {
         "id": 3,  
-        "name": "Brandon Ingram",
+        "name": "Brandon Ingram, SF/SG",
         "number": "14",
         "team": "New Orleans Pelicans",
         "image": "./img/cards/bi3.jpg"
       },
       {
         "id": 4,
-        "name": "Karl-Anthony Towns",
+        "name": "Karl-Anthony Towns, C",
         "number": "32",
         "team": "Minnesota Timberwolves",
         "image": "./img/cards/kat4.jpeg"
       },      
       {
         "id": 5,
-        "name": "Vince Carter (old school)",
+        "name": "Vince Carter (old school), SG/SF",
         "number": "15", 
         "team": "Toronto Raptors",
         "image": "./img/cards/vc5.jpg"
       },      
       {
         "id": 6, 
-        "name": "Lebron James",
+        "name": "Lebron James, every position",
         "number": "23",
         "team": "Los Angeles Lakers",
         "image": "./img/cards/lbj6.jpg"
        
       },      {
         "id": 7,
-        "name": "Damian Lillard",
+        "name": "Damian Lillard, PG",
         "number": "0",
         "team": "Portland Trail Blazers",
         "image": "./img/cards/dame7.jpeg"
@@ -52,7 +52,7 @@
       },
       {
         "id": 8,
-        "name": "Boban (the big boy) Marjanovich",
+        "name": "Boban Marjanovich, biggest fella on the court",
         "number": "51",
         "team": "Dallas Mavericks",
         "image": "./img/cards/boban8.jpeg"
@@ -60,7 +60,7 @@
       },
       {
         "id": 9, 
-        "name": "Trae Young",
+        "name": "Trae Young, PG",
         "number": "11",
         "team": "Atlanta Hawks",
         "image": "./img/cards/trae9.jpg"
@@ -68,7 +68,7 @@
       },
       {
         "id": 10,  
-        "name": "Giannis Antetokounmpo",
+        "name": "Giannis Antetokounmpo, also every position",
         "number": "34",
         "team": "Milwaukee Bucks",
         "image": "./img/cards/abc10.PNG"

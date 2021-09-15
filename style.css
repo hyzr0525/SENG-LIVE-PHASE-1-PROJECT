@@ -7,11 +7,15 @@ background-color: rgb(139, 169, 187);
     margin: 0 auto;
   }
   
+  .header-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
   #cards-gif {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width:50%;
+    width:100%;
     height: 150px
   }
 
@@ -21,7 +25,7 @@ background-color: rgb(139, 169, 187);
       -1px 1px 0 rgb(247, 241, 241), 1px 1px 0 rgb(247, 241, 241);
   }
   
-  .header-text {
+  #header-text {
     font-size: larger;
     text-align: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -58,7 +62,7 @@ background-color: rgb(139, 169, 187);
     float: left;
     text-align: center;
     width: 175px;
-    height: 425px;
+    height: 475px;
   }
 
   #player-pictures {
@@ -112,10 +116,19 @@ background-color: rgb(139, 169, 187);
     color: rgb(83, 79, 79);
   }
   
+  #form-info {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: medium
+  }
+
   #form-container {
     margin-top: 25px;
+    margin-left: 300px;
     display: inline-flex;
     justify-content: center;
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
   .like-bttn {
@@ -130,12 +143,13 @@ background-color: rgb(139, 169, 187);
   .like-bttn:hover {
     color:red;
     background-color: white;
+    
   }
   
   .delete-bttn {
     color: red;
     font-size: medium;
-
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
   .delete-bttn:hover {
@@ -145,7 +159,13 @@ background-color: rgb(139, 169, 187);
   .info-bttn {
     color:black;
     font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
+  }
+
+  .hi-bttn {
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
   .hide {
