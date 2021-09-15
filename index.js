@@ -29,10 +29,12 @@ function renderCards(cards){
     const likeBttn = document.createElement("button")
     likeBttn.className = "like-bttn"
     likeBttn.textContent = "♥"
+    likeBttn.addEventListener("click", () => lightUpButton());
 
     const deleteBttn = document.createElement("button");
     deleteBttn.className = "delete-bttn";
     deleteBttn.textContent = "Delete";
+    deleteBttn.addEventListener("click", () => deletePlayer(playerCard));
 
     const playerInfo = document.createElement('div')
     playerInfo.id = "info"
@@ -67,6 +69,15 @@ function renderCards(cards){
 
 }
 
+function lightUpButton(){
+    // funtion for light up the like buttom after it clicked
+}
+
+function deletePlayer(playerCard){
+    playerCard.remove();
+
+}
+
 function createNewCard(event) {
     event.preventDefault();
     const newPlayer = document.querySelector("#player-input").value;
@@ -83,3 +94,5 @@ function createNewCard(event) {
     renderCards(newPlayerCard);
     playerForm.reset();
 }
+
+playerForm.addEventListener("submit", createNewCard)
