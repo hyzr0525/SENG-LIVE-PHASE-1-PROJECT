@@ -31,7 +31,10 @@ background-color: rgb(181, 213, 233);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
 
-  
+  img {
+    height: 175px;
+    width: 175px;
+  }
 
   #players {
     height:400px;
@@ -133,7 +136,7 @@ background-color: rgb(181, 213, 233);
   }
   
   .like-bttn {
-    color:white;
+    color:red;
     font-size: larger;
     margin-right: 30px;
     margin-left: 30px;
@@ -146,6 +149,7 @@ background-color: rgb(181, 213, 233);
     background-color: white;
     
   }
+
   
   .delete-bttn {
     color: red;

@@ -25,12 +25,12 @@ function renderCards(cards){
     const playerImg = document.createElement('img')
     playerImg.src = cards.image
     playerImg.alt = cards.name
-    playerImg.id = "player-pictures"
 
     const likeBttn = document.createElement("button")
+    const likeIcon = document.createElement("i")
+    likeIcon.className = "far fa-heart"
     likeBttn.className = "like-bttn"
-    likeBttn.textContent = "♥"
-    likeBttn.addEventListener("click", () => lightUpButton());
+    likeBttn.addEventListener("click", () => lightUpButton(likeIcon));
 
     const deleteBttn = document.createElement("button");
     deleteBttn.className = "delete-bttn";
@@ -38,8 +38,7 @@ function renderCards(cards){
     deleteBttn.addEventListener("click", () => deletePlayer(playerCard));
 
     const playerInfo = document.createElement('div')
-    playerInfo.id = `player ${cards.id}`
-    playerInfo.className = "hide"
+    playerInfo.id = "info"
 
     const playerName = document.createElement('h4')
     playerName.textContent = cards.name
@@ -53,6 +52,9 @@ function renderCards(cards){
     const createButton = document.createElement('button')
     createButton.className = "info-bttn"
     createButton.textContent = "Player Info"
+
+    likeBttn.append(likeIcon)
+    playerCard.append(playerImg, likeBttn, createButton, playerInfo, deleteBttn)
     createButton.addEventListener('click', showInfo)
     
     function showInfo(e) {
@@ -77,17 +79,33 @@ function renderCards(cards){
     playerCard.append(playerImg, likeBttn, createButton, hiBttn, deleteBttn)
     playerInfo.append(playerName, playerNumber, playerTeam)
     cardsContainer.appendChild(playerCard)
-    
-    
+
+    const button = document.querySelector('button') // player info button
+    const cardsInfo = document.getElementById('info') // info displayed by button
+    let cardsInfoVisible = "hidden" // info default state of hidden
+
+    function toggleInfo() { // function to toggle info as hidden or visible
+        cardsInfoVisible = cardsInfoVisible === "hidden" ? cardsInfoVisible = "visible" : cardsInfoVisible = "hidden";
+        cardsInfo.style.visibility = cardsInfoVisible
     }
 
+    button.onclick = toggleInfo
 
+}
 
-
-
-
-function lightUpButton(){
+let clicked = false
+function lightUpButton(likeIcon){
+    likeIcon.preventDefault
     // funtion for light up the like buttom after it clicked
+    
+    if (!clicked){
+        clicked = true;
+        likeIcon.className = "fas fa-heart"
+    } else {
+        clicked = false;
+        likeIcon.className = "far fa-heart"
+    }
+    
 }
 
 function deletePlayer(playerCard){
@@ -125,3 +143,4 @@ function createNewCard(event) {
 }
 
 playerForm.addEventListener("submit", createNewCard)
+
