@@ -55,6 +55,28 @@ function renderCards(cards){
 
     likeBttn.append(likeIcon)
     playerCard.append(playerImg, likeBttn, createButton, playerInfo, deleteBttn)
+    createButton.addEventListener('click', showInfo)
+    
+    function showInfo(e) {
+        if (e.target.querySelector('.hide') === e.target.querySelector('.hide')){
+          e.target.querySelector('.hide').classList.toggle('show') 
+        } else e.target.querySelector('.show').classList.toggle('.hide')
+
+        }
+
+    const hiBttn = document.createElement('button')
+    hiBttn.className = "hi-bttn"
+    hiBttn.innerText = "Highlights"
+    hiBttn.addEventListener('click', (e)=>{
+        const HI_PATH = 'https://www.youtube.com/results?search_query='
+        const PLAYER_URL = playerCard.querySelector('h4').textContent
+        console.log(PLAYER_URL)
+        window.open(`${HI_PATH}${PLAYER_URL}+highlights`)
+    })
+
+    hiBttn.appendChild(playerInfo)
+    createButton.appendChild(playerInfo)
+    playerCard.append(playerImg, likeBttn, createButton, hiBttn, deleteBttn)
     playerInfo.append(playerName, playerNumber, playerTeam)
     cardsContainer.appendChild(playerCard)
 
@@ -104,7 +126,19 @@ function createNewCard(event) {
       team: newTeam,
       img: newImg
     };
+
+    const configObj = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newPlayerCard)
+    }
+    
     renderCards(newPlayerCard);
+    
+    fetch(BASE_URL, configObj)
+    
     playerForm.reset();
 }
 
