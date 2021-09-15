@@ -9,44 +9,51 @@
     <title>NBA Player Card Collection</title>
 </head>
 <body>
+<div id="header">
+    <img
+        id="header-img"
+        src="img/basketball-header.jpg"/>
+</div>
 
+<p>This is an expertly curated collection of cards that commemorate our favorite NBA players.
+    <br></br>
+    They're not quite physical cards...but not quite NFTs.
+    <br></br>
+    They're...
+</p>
+<div id="cards-gif">
+    <img
+        id="funny-gif"
+        src="img/virtualcards.gif" />
 
-    <div id="header">
-        <img
-            id="header-img"
-            src="img/basketball-header.jpg"/>
+</div>
+
+<div id="cards-container" class="player-card">
+    <div id ="card-1">
+    <img class="detail-image" src="" alt="insert player here" />
+
+    <div id="cards-info">
+        <h3 class="name">Insert name here</h3>
+        <h4 class="number">Insert number here</h4>
+        <h3 class="team">Insert team here</h3>
     </div>
+    <button>Player Info</button>
+</div>
 
-    <p class = "header-text">This is an expertly curated collection of cards that commemorate our favorite NBA players.
-        <br></br>
-        They're not quite physical cards...but not quite NFTs.
-        <br></br>
-        They're...
-    </p>
-    <div id="cards-gif">
-        <img
-            id="funny-gif"
-            src="img/virtualcards.gif" />
+<div id="form-container">
+    <form id="card-form">
+        <label><strong>Player: </strong></label> 
+        <input type="text" id="player-input" />
+        <label><strong>Team: </strong></label>
+        <input type="text" id="team-input" />
+        <label><strong>Number: </strong></label>
+        <input type="text" id="number-input" />
+        <label><strong>Image: </strong></label>
+        <input type="text" id="image-input" />
+        <input type="submit" value="Submit" />
 
-    </div>
-    <div id="cards-container">
-    </div>
-
-
-    <div id="form-container">
-        <form id="card-form">
-            <label><strong>Player: </strong></label> 
-            <input type="text" id="player-input" />
-            <label><strong>Team: </strong></label>
-            <input type="text" id="team-input" />
-            <label><strong>Number: </strong></label>
-            <input type="text" id="number-input" />
-            <label><strong>Image: </strong></label>
-            <input type="text" id="image-input" />
-            <input type="submit" value="Submit" />
-
-        </form>
-    </div>
-
+    </form>
+</div>
+    
 </body>
 </html>
