@@ -1,7 +1,12 @@
+body {
+background-color: rgb(139, 169, 187);
+}
+
 #header {
     text-align: center;
     margin: 0 auto;
   }
+  
   
   #title {
     color: rgb(0, 0, 0);
@@ -9,37 +14,57 @@
       -1px 1px 0 rgb(247, 241, 241), 1px 1px 0 rgb(247, 241, 241);
   }
   
-  img {
-    height: 100px;
-    width: 100px;
+  .header-text {
+    font-size: larger;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  #players {
+    height: 400px;
+    width: 400px;
+    
+  }
+
+
+  #cards-gif {
+    height: default;
+    width: default;
+    text-align: center;
+
   }
   
   #header-img {
-    height: 175px;
-    width: 550px;
+    height: 275px;
+    width: 1700px;
   }
   
-  .player-card {
+  .player-cards {
     border: solid;
-    border-color: #ffcb05;
+    border-color: #0586ff;
     padding: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     margin: 30px;
     float: left;
     text-align: center;
-    width: 100px;
-    height: 275px;
-  }
-  
-  .poke-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(218, 31, 31, 0.685);
-  }
-  
-  #poke-container {
+    width: 450px;
+    height: 525px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+  }
+  
+  .player-cards:hover {
+    box-shadow: 0 8px 16px 0 rgb(31, 218, 31);
+  }
+  
+
+  .button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    color:rgb(156, 156, 156)
   }
   
   input[type="text"]:not(.edit-input) {
@@ -69,9 +94,9 @@
     color: rgb(83, 79, 79);
   }
   
-  #poke-form-container {
+  #cards-container {
     margin-top: 25px;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
   }
   
@@ -95,4 +120,8 @@
   
   .delete-bttn:hover {
     background-color: pink;
+  }
+
+  .hide {
+    display: none;
   }
