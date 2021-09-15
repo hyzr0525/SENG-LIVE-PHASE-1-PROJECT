@@ -25,12 +25,12 @@ function renderCards(cards){
     const playerImg = document.createElement('img')
     playerImg.src = cards.image
     playerImg.alt = cards.name
-    playerImg.id = "player-pictures"
 
     const likeBttn = document.createElement("button")
+    const likeIcon = document.createElement("i")
+    likeIcon.className = "far fa-heart"
     likeBttn.className = "like-bttn"
-    likeBttn.textContent = "♥"
-    likeBttn.addEventListener("click", () => lightUpButton(likeBttn));
+    likeBttn.addEventListener("click", () => lightUpButton(likeIcon));
 
     const deleteBttn = document.createElement("button");
     deleteBttn.className = "delete-bttn";
@@ -38,8 +38,7 @@ function renderCards(cards){
     deleteBttn.addEventListener("click", () => deletePlayer(playerCard));
 
     const playerInfo = document.createElement('div')
-    playerInfo.id = `player ${cards.id}`
-    playerInfo.className = "hide"
+    playerInfo.id = "info"
 
     const playerName = document.createElement('h4')
     playerName.textContent = cards.name
@@ -53,36 +52,36 @@ function renderCards(cards){
     const createButton = document.createElement('button')
     createButton.className = "info-bttn"
     createButton.textContent = "Player Info"
-    createButton.addEventListener('click', showInfo)
-    
-    function showInfo(e) {
-        if (e.target.querySelector('.hide') === e.target.querySelector('.hide')){
-          e.target.querySelector('.hide').classList.toggle('show') 
-        } else e.target.querySelector('.show').classList.toggle('.hide')
 
-        }
-    createButton.appendChild(playerInfo)
-    playerCard.append(playerImg, likeBttn, createButton, deleteBttn)
+    likeBttn.append(likeIcon)
+    playerCard.append(playerImg, likeBttn, createButton, playerInfo, deleteBttn)
     playerInfo.append(playerName, playerNumber, playerTeam)
     cardsContainer.appendChild(playerCard)
-    
-    
+
+    const button = document.querySelector('button') // player info button
+    const cardsInfo = document.getElementById('info') // info displayed by button
+    let cardsInfoVisible = "hidden" // info default state of hidden
+
+    function toggleInfo() { // function to toggle info as hidden or visible
+        cardsInfoVisible = cardsInfoVisible === "hidden" ? cardsInfoVisible = "visible" : cardsInfoVisible = "hidden";
+        cardsInfo.style.visibility = cardsInfoVisible
     }
 
+    button.onclick = toggleInfo
 
+}
 
-
-
-
-function lightUpButton(likeBttn){
+let clicked = false
+function lightUpButton(likeIcon){
+    likeIcon.preventDefault
     // funtion for light up the like buttom after it clicked
-    let clicked = false
+    
     if (!clicked){
         clicked = true;
-        likeBttn.textContent = "❤️";
+        likeIcon.className = "fas fa-heart"
     } else {
         clicked = false;
-        likeBttn.textContent = "♥";
+        likeIcon.className = "far fa-heart"
     }
     
 }
@@ -110,3 +109,4 @@ function createNewCard(event) {
 }
 
 playerForm.addEventListener("submit", createNewCard)
+
