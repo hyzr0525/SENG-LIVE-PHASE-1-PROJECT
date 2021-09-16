@@ -1,7 +1,7 @@
 
 body {
   background-color: #bde3f1;
-  background-image: linear-gradient(315deg, #ec8836 0%, #d3ebf1 74%);
+  background-image: linear-gradient(315deg, #d6951c 0%, #d3ebf1 74%);
   
 }
 
@@ -38,7 +38,7 @@ body {
 
   #cards-gif:hover {
     animation: shake 0.5s;
-    animation-iteration-count: 50;
+    animation-iteration-count: 10;
   }
 
   @keyframes shake {
@@ -66,7 +66,6 @@ body {
     width: 175px;
     border-radius: 15px;
   }
-
 
   #players {
     height:400px;
@@ -102,7 +101,6 @@ body {
     width: 175px;
     height: 500px;
     border-radius: 15px;
-    transition: all .2s ease-in-out;
   }
 
   #player-pictures {
@@ -117,12 +115,9 @@ body {
   #player-pictures:hover {
     box-shadow: 0 8px 16px 0 rgba(243, 138, 39, 0.685);
   }
-
-
   
   .player-cards:hover {
     box-shadow: 0 8px 16px 0 rgba(255, 115, 0, 0.685);
-    transform: scale(1.1);
   }
   
   #cards-container {
@@ -145,20 +140,19 @@ body {
   }
   
   input[type="submit"] {
-    background-color: #79d9ff;
-    color: rgb(0, 0, 0);
+    background-color: steelblue;
+    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: larger;
     padding: 14px 20px;
     margin: 8px 0;
     margin-left: 15px;
-    border: solid;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
   }
   
   input[type="submit"]:hover {
-    background-color: rgba(255, 110, 14);
+    background-color: #ffcb05;
   }
   
 
@@ -248,7 +242,7 @@ body {
   }
 
   .info-bttn:hover {
-    background-color: rgb(255, 110, 14);
+    background-color: rgb(176, 238, 238);
   }
 
   .hi-bttn {
