@@ -23,6 +23,7 @@ function renderCards(cards){
     playerCard.className = "player-cards"
 
     const playerImg = document.createElement('img')
+    playerImg.className = "player-img"
     playerImg.src = cards.image
     playerImg.alt = cards.name
 
