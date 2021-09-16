@@ -10,14 +10,28 @@ body {
     margin: 0 auto;
   }
   
-  .header-text {
+  #header-text {
+    background-color: rgb(181, 213, 233);
+    font-size: larger;
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 25px;
+    border: solid;
+    border-color: black;
+    width: max-content;
+    transition: all .4s ease-in-out;
+    margin: auto;
+  }
+
+  #header-text:hover {
+    box-shadow: 0 8px 25px 0 rgba(247, 124, 10, 0.685)
   }
 
   #cards-gif {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 50px;
     width:100%;
     height: 150px
   }
@@ -47,12 +61,6 @@ body {
       -1px 1px 0 rgb(247, 241, 241), 1px 1px 0 rgb(247, 241, 241);
   }
   
-  #header-text {
-    font-size: larger;
-    text-align: center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-  }
-
   .player-img {
     height: 175px;
     width: 175px;
@@ -167,10 +175,20 @@ body {
   }
 
   #nba {
+    cursor: pointer;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    animation: wiggle 1.5s infinite;
   }
+
+  @keyframes wiggle {
+    0% { transform: rotate(0deg); }
+   80% { transform: rotate(0deg); }
+   85% { transform: rotate(5deg); }
+   95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
 
   #form-container {
     margin-top: 25px;

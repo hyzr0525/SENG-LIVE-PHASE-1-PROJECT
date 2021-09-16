@@ -106,6 +106,12 @@ const playMusic = function(){
         else audio.play()
     }
 
+const nbaLink = document.getElementById('nba')
+nbaLink.addEventListener('click', ()=>{
+    const NBA_PATH = "https://www.nba.com/"
+    window.open(NBA_PATH)
+})
+
 
 function deletePlayer(cards){
     cards.remove();
