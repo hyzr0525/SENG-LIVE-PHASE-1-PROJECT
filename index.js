@@ -2,6 +2,7 @@
 const BASE_URL = "http://localhost:3000/players"
 const cardsContainer = document.getElementById("cards-container")
 
+
 getCards()
 
 function getCards(){
@@ -27,18 +28,24 @@ function renderCards(cards){
     playerImg.src = cards.image
     playerImg.alt = cards.name
     playerImg.id = "player-pictures"
-
+    
+    
+    
+    
     const likeBttn = document.createElement("button")
     likeBttn.className = "like-bttn"
     likeBttn.id = 'like'
     likeBttn.textContent = "🏀"
     likeBttn.addEventListener("click", lightUpButton);
+    likeBttn.addEventListener('click', playMusic)
 
     function lightUpButton(){
         if(likeBttn.classList.contains('active')){
             likeBttn.classList.remove('active')
         } else likeBttn.classList.add('active')
     }
+    
+
 
     const deleteBttn = document.createElement("button");
     deleteBttn.className = "delete-bttn";
@@ -89,8 +96,15 @@ function renderCards(cards){
     
     }
 
+const audio = new Audio('./music/basketball.mp3')
+audio.paused = true
 
-
+const playMusic = function(){
+        
+        if (audio.paused === false)
+            audio.pause()
+        else audio.play()
+    }
 
 
 function deletePlayer(cards){
