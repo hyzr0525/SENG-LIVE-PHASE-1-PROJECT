@@ -79,7 +79,6 @@ body {
   #player-pictures {
     display: flex;
     background-color: rgb(181, 213, 233);
-    border: solid;
     height: 200px;
     width: 175px;
     text-align: center;
@@ -183,12 +182,12 @@ body {
   }
   
   .delete-bttn {
-    color: rgb(0, 0, 0);
-    outline: rgba(238, 7, 38, 0.2);
+    color: white;
+    background-color: steelblue;
     font-size: medium;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: solid;
-
+    margin-left: 5px;
+    border-radius: 5px;
   }
   
   .delete-bttn:hover {
@@ -197,14 +196,13 @@ body {
   }
 
   .info-bttn {
-    border: red;
-    color: black;
+    color:white;
+    background-color: steelblue;
     font-size: larger;
     font-size: medium;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 10px;
-    border: solid
-    
+    border-radius: 5px;
   }
 
   .info-bttn:hover {
@@ -214,19 +212,19 @@ body {
   .hi-bttn {
     font-size: medium;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(0, 26, 255);
-    border: solid;
-    border-color: rgb(240, 117, 16);
+    color:white;
+    background-color:steelblue;
+    border-radius: 5px;
   }
 
   .hi-bttn:hover {
-    background-color: rgb(253, 234, 127)
+    background-color: white;
+    color: steelblue;
   }
 
   .hide {
     display: none;
   }
-
 
   .show {
     display: block;
