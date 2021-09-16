@@ -197,10 +197,12 @@ body {
   }
 
   .info-bttn {
-    color:black;
+    border: red
+    color: black;
     font-size: larger;
     font-size: medium;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 10px;
     border: solid
     
   }
