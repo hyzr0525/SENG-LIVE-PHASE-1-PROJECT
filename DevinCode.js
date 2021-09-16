@@ -43,7 +43,7 @@ const renderCards = (cards) => {
     const createButton = document.createElement('button')
     createButton.innerHTML = "Player Info"
     createButton.className = "button"
-    
+    createButton.addEventListener('click', toggleHide)
 
 
     playerCard.append(playerName, playerImg, createButton, playerInfo)
@@ -51,36 +51,21 @@ const renderCards = (cards) => {
     cardsContainer.appendChild(playerCard)
 
  
-   
-
-
-    }
-
-getCards() 
-
-let btns = document.querySelectorAll('button')
-
-btns.forEach(button => {
-    button.addEventListener('click', clickEach)
-})
-
-function clickEach(e){
-let id = e.currentTarget.id
-let btn = document.getElementById(id)
-let div = document.getElementById('info')
-div.className = id
 }
 
 
 
-
-// document.querySelectorAll('button').forEach(button => {
-//     button.addEventListener('click', () => {
-//         if (playerInfo.style.display === 'none') {
-//             playerInfo.style.display === 'block'
-//         } else {
-//             playerInfo.style.display = "none"
-//         }
     
-// })
-// })
+
+getCards()
+ // player info button
+
+const toggleHide = () => {
+    let info = document.querySelectorAll('info')
+    console.log(info)
+    if (info.style.display === 'none') {
+                     info.style.display === 'block'
+                     } else {
+                     info.style.display = "none"
+                 }
+}

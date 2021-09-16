@@ -24,7 +24,7 @@ body {
 
   #cards-gif:hover {
     animation: shake 0.5s;
-    animation-iteration-count: 10;
+    animation-iteration-count: 50;
   }
 
   @keyframes shake {
@@ -58,6 +58,7 @@ body {
     width: 175px;
     border-radius: 15px;
   }
+
 
   #players {
     height:400px;
@@ -93,6 +94,7 @@ body {
     width: 175px;
     height: 500px;
     border-radius: 15px;
+    transition: all .2s ease-in-out;
   }
 
   #player-pictures {
@@ -108,9 +110,12 @@ body {
   #player-pictures:hover {
     box-shadow: 0 8px 16px 0 rgba(243, 138, 39, 0.685);
   }
+
+
   
   .player-cards:hover {
     box-shadow: 0 8px 16px 0 rgba(255, 115, 0, 0.685);
+    transform: scale(1.1);
   }
   
   #cards-container {
