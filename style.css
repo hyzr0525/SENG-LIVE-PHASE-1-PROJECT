@@ -24,7 +24,8 @@ body {
   }
 
   #header-text:hover {
-    box-shadow: 0 8px 25px 0 rgba(247, 124, 10, 0.685)
+    box-shadow: 0 8px 16px 0 rgba(255, 115, 0, 0.685);
+    transform: scale(1.1);
   }
 
   #cards-gif {
@@ -33,7 +34,7 @@ body {
     flex-wrap: wrap;
     margin-top: 50px;
     width:100%;
-    height: 150px
+    height: 150px;
   }
 
   #cards-gif:hover {
@@ -70,7 +71,7 @@ body {
   #players {
     height:400px;
     width: 400px;
-    
+    transition: all .2s ease-in-out
   }
 
 
@@ -101,6 +102,7 @@ body {
     width: 175px;
     height: 500px;
     border-radius: 15px;
+    transition: all .2s ease-in-out;
   }
 
   #player-pictures {
@@ -112,12 +114,14 @@ body {
     flex-wrap: wrap;
   }
 
-  #player-pictures:hover {
-    box-shadow: 0 8px 16px 0 rgba(243, 138, 39, 0.685);
-  }
-  
   .player-cards:hover {
     box-shadow: 0 8px 16px 0 rgba(255, 115, 0, 0.685);
+    transform: scale(1.1);
+  }
+  
+  #player-cards:hover {
+    box-shadow: 0 8px 16px 0 rgba(255, 115, 0, 0.685);
+    transform: scale(1.1);
   }
   
   #cards-container {
@@ -242,8 +246,7 @@ body {
   }
 
   .info-bttn:hover {
-    background-color: rgb(176, 238, 238);
-  }
+  background-color: rgb(176, 238, 238);}
 
   .hi-bttn {
     font-size: medium;
