@@ -69,14 +69,6 @@
       "number": "34",
       "team": "Milwaukee Bucks",
       "image": "./img/cards/abc10.PNG"
-    },
-    {
-      "name": "Devin Booker",
-      "number": "1",
-      "team": "Phoenix Suns",
-      "img": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/jnniqdoxwd7hjl5tht3v",
-      "id": 11
     }
-  
   ]
 }
