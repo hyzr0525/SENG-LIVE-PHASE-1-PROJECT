@@ -26,12 +26,19 @@ function renderCards(cards){
     playerImg.className = "player-img"
     playerImg.src = cards.image
     playerImg.alt = cards.name
+    playerImg.id = "player-pictures"
 
     const likeBttn = document.createElement("button")
-    const likeIcon = document.createElement("i")
-    likeIcon.className = "far fa-heart"
     likeBttn.className = "like-bttn"
-    likeBttn.addEventListener("click", () => lightUpButton(likeIcon));
+    likeBttn.id = 'like'
+    likeBttn.textContent = "🏀"
+    likeBttn.addEventListener("click", lightUpButton);
+
+    function lightUpButton(){
+        if(likeBttn.classList.contains('active')){
+            likeBttn.classList.remove('active')
+        } else likeBttn.classList.add('active')
+    }
 
     const deleteBttn = document.createElement("button");
     deleteBttn.className = "delete-bttn";
@@ -39,7 +46,8 @@ function renderCards(cards){
     deleteBttn.addEventListener("click", () => deletePlayer(playerCard));
 
     const playerInfo = document.createElement('div')
-    playerInfo.id = "info"
+    playerInfo.id = `player ${cards.id}`
+    playerInfo.className = "hide"
 
     const playerName = document.createElement('h4')
     playerName.textContent = cards.name
@@ -52,10 +60,7 @@ function renderCards(cards){
 
     const createButton = document.createElement('button')
     createButton.className = "info-bttn"
-    createButton.textContent = "Player Info"
-
-    likeBttn.append(likeIcon)
-    playerCard.append(playerImg, likeBttn, createButton, playerInfo, deleteBttn)
+    createButton.textContent = "Click me for Player Info!"
     createButton.addEventListener('click', showInfo)
     
     function showInfo(e) {
@@ -68,7 +73,7 @@ function renderCards(cards){
     const hiBttn = document.createElement('button')
     hiBttn.className = "hi-bttn"
     hiBttn.innerText = "Highlights"
-    hiBttn.addEventListener('click', (e)=>{
+    hiBttn.addEventListener('click', ()=>{
         const HI_PATH = 'https://www.youtube.com/results?search_query='
         const PLAYER_URL = playerCard.querySelector('h4').textContent
         console.log(PLAYER_URL)
@@ -80,39 +85,19 @@ function renderCards(cards){
     playerCard.append(playerImg, likeBttn, createButton, hiBttn, deleteBttn)
     playerInfo.append(playerName, playerNumber, playerTeam)
     cardsContainer.appendChild(playerCard)
-
-    const button = document.querySelector('button') // player info button
-    const cardsInfo = document.getElementById('info') // info displayed by button
-    let cardsInfoVisible = "hidden" // info default state of hidden
-
-    function toggleInfo() { // function to toggle info as hidden or visible
-        cardsInfoVisible = cardsInfoVisible === "hidden" ? cardsInfoVisible = "visible" : cardsInfoVisible = "hidden";
-        cardsInfo.style.visibility = cardsInfoVisible
+    
+    
     }
 
-    button.onclick = toggleInfo
 
-}
 
-let clicked = false
-function lightUpButton(likeIcon){
-    likeIcon.preventDefault
-    // funtion for light up the like buttom after it clicked
-    
-    if (!clicked){
-        clicked = true;
-        likeIcon.className = "fas fa-heart"
-    } else {
-        clicked = false;
-        likeIcon.className = "far fa-heart"
-    }
-    
-}
 
-function deletePlayer(playerCard){
-    playerCard.remove();
 
-}
+function deletePlayer(cards){
+    cards.remove();
+    fetch(`${BASE_URL}/${cards.id}`, {
+        method: "DELETE",
+    })}
 
 function createNewCard(event) {
     event.preventDefault();
@@ -143,5 +128,5 @@ function createNewCard(event) {
     playerForm.reset();
 }
 
-playerForm.addEventListener("submit", createNewCard)
 
+playerForm.addEventListener("submit", createNewCard)
