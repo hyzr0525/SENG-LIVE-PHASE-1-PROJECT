@@ -167,9 +167,11 @@ background-color: rgb(181, 213, 233);
   }
 
   .info-bttn {
+    border: red
     color:black;
     font-size: medium;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 20px;
 
   }
 
