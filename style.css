@@ -151,9 +151,11 @@ body {
 
   #form-container {
     margin-top: 25px;
-    margin-left: 300px;
+    margin-left: 10px;
     justify-content: center;
     font-size: larger;
+    border: solid;
+    border-color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     flex-wrap: wrap;
