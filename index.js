@@ -1,9 +1,9 @@
 
 const BASE_URL = "http://localhost:3000/players"
 const cardsContainer = document.getElementById("cards-container")
+const playerForm = document.getElementById("card-form")
 
 
-getCards()
 
 function getCards(){
     fetch(BASE_URL)
@@ -14,8 +14,6 @@ function getCards(){
         })
     })
 }
-
-const playerForm = document.querySelector("#form-container")
 
 
 function renderCards(cards){
@@ -119,34 +117,43 @@ function deletePlayer(cards){
         method: "DELETE",
     })}
 
+
+
 function createNewCard(event) {
     event.preventDefault();
     const newPlayer = document.querySelector("#player-input").value;
     const newTeam = document.querySelector("#team-input").value;
     const newNumber = document.querySelector("#number-input").value;
-    const newImg = document.querySelector("#image-input").value;
+    const newImg = event.target.querySelector("#image-input").value;
     
-    const newPlayerCard = {
+    const cards = {
       name: newPlayer,
       number: newNumber,
       team: newTeam,
-      img: newImg
+      image: newImg
     };
 
     const configObj = {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
         },
-        body: JSON.stringify(newPlayerCard)
+        body: JSON.stringify(cards),
     }
+    console.log(cards)
     
-    renderCards(newPlayerCard);
-    
+    renderCards(cards)
+
     fetch(BASE_URL, configObj)
     
+
     playerForm.reset();
 }
 
-
+const letsGo = () => {
+getCards()
 playerForm.addEventListener("submit", createNewCard)
+}
+
+letsGo();
+

@@ -69,6 +69,13 @@
       "number": "34",
       "team": "Milwaukee Bucks",
       "image": "./img/cards/abc10.PNG"
+    },
+    {
+      "name": "Devy",
+      "number": "55",
+      "team": "Pelicans",
+      "image": "https://m.media-amazon.com/images/I/41EeOM0waZL._AC_.jpg",
+      "id": 11
     }
   ]
 }
